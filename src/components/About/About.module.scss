@@ -1,0 +1,48 @@
+.content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: center;
+
+	font-size: 1.1rem;
+	color: var(--text-secondary);
+
+	p {
+		line-height: 1.8;
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	@include breakpoint-range($to: lg) {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+}
+
+.box {
+	background: var(--card-bg);
+	box-shadow: var(--shadow-md);
+	padding: 2.5rem;
+	border-top: 0.25rem solid var(--primary);
+	border-radius: var(--radius-lg);
+
+	transition: all var(--transition-base);
+	will-change: transform, box-shadow;
+
+	@include hover {
+		box-shadow: var(--shadow-lg);
+		@include bubble-up(0.5rem);
+	}
+}
+
+.location {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 500;
+
+	svg {
+		color: var(--primary);
+	}
+}

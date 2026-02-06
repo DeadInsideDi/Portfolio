@@ -1,0 +1,67 @@
+.cards {
+	&:has(> .skillCard) {
+		--card-width: 16rem;
+	}
+	&:has(> .linkCard) {
+		--card-width: 12rem;
+	}
+
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(min(var(--card-width), 100%), 1fr)
+	);
+	gap: 2rem;
+
+	text-align: center;
+}
+
+.skillCard,
+.linkCard {
+	background-color: var(--card-bg);
+	box-shadow: var(--shadow-md);
+	padding: 2rem;
+
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-md);
+
+	transition: all var(--transition-base);
+	will-change: transform, box-shadow;
+
+	@include hover {
+		box-shadow: var(--shadow-lg);
+		border-color: var(--primary);
+		@include bubble-up(0.5rem);
+	}
+}
+
+.skillCard {
+	svg {
+		font-size: 5rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		color: var(--text-secondary);
+	}
+}
+
+.linkCard {
+	svg {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 1.3rem;
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		color: var(--text-tertiary);
+		font-size: 0.9rem;
+	}
+}

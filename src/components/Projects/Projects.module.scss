@@ -1,0 +1,116 @@
+.projects {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 1rem 7.5%;
+
+		border: 1rem dashed rgb(from var(--primary) r g b / 0.5);
+		border-top: hidden;
+		border-bottom: hidden;
+		border-radius: 6rem;
+		z-index: -1;
+	}
+
+	> * {
+		background-color: var(--card-bg);
+		box-shadow: var(--shadow-md);
+
+		border: 1px solid var(--border-color);
+		border-radius: var(--radius-md);
+
+		transition: all var(--transition-base);
+		will-change: transform, box-shadow;
+
+		width: 80%;
+		&:nth-child(even) {
+			align-self: flex-end;
+		}
+
+		@include breakpoint-range($to: md) {
+			width: 100%;
+			align-self: unset !important;
+		}
+
+		@include hover {
+			box-shadow: var(--shadow-lg);
+			border-color: var(--primary);
+			img {
+				transform: scale(1.05);
+			}
+			@include bubble-up;
+		}
+	}
+}
+
+@mixin tag {
+	font-size: 0.75rem;
+	padding: 0.25rem 0.75rem;
+	border-radius: var(--radius-full);
+}
+
+.image {
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+	overflow: hidden;
+
+	img {
+		transition: transform var(--transition-slow);
+	}
+
+	> span {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+
+		font-weight: 500;
+		background-color: var(--primary);
+		color: var(--white);
+		@include tag;
+	}
+}
+
+.content {
+	padding: 1.5rem;
+
+	> h3 {
+		font-size: 1.75rem;
+		font-weight: 600;
+		line-height: 1.8;
+	}
+
+	> p {
+		font-size: 1.25rem;
+		color: var(--text-secondary);
+	}
+
+	> a {
+		width: fit-content;
+		font-weight: 500;
+		color: var(--primary);
+
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		@include hover {
+			color: var(--primary-700);
+		}
+	}
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-block: 1.5rem;
+
+	> * {
+		background-color: var(--bg-tertiary);
+		@include tag;
+	}
+}

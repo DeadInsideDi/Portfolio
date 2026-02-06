@@ -1,0 +1,100 @@
+// mixins are imported globally from vite.config.ts
+@use 'sass:map';
+@use 'sass:string';
+
+@mixin desktop {
+	@media only screen and (pointer: fine) and (hover: hover) {
+		@content;
+	}
+}
+
+@mixin hover {
+	@include desktop {
+		&:hover {
+			@content;
+		}
+	}
+}
+
+@mixin mobile {
+	@media only screen and (pointer: coarse) and (hover: none) {
+		@content;
+	}
+}
+
+@mixin unselectable {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+$breakpoints: (
+	xs: 320px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	2xl: 1400px,
+	3xl: 1600px,
+);
+
+@mixin breakpoint-range($from: false, $to: false, $mode: 'only screen') {
+	$conditions: '#{$mode}';
+
+	@if map.get($breakpoints, $from) {
+		$from: map.get($breakpoints, $from);
+	}
+	@if map.get($breakpoints, $to) {
+		$to: map.get($breakpoints, $to) - 1px;
+	}
+
+	@each $key, $value in (min-width: $from, max-width: $to) {
+		@if $value {
+			$condition: ' and (#{$key}: #{$value})';
+			$conditions: string.insert($conditions, $condition, -1);
+		}
+	}
+
+	@media #{$conditions} {
+		&:not(_) {
+			@content;
+		}
+	}
+}
+
+@mixin text-truncate($lines: 1) {
+	@if $lines == 1 {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	} @else {
+		display: -webkit-box;
+		-webkit-line-clamp: $lines;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+}
+
+@mixin bubble-up(
+	$distance: 1rem,
+	$duration: 0.2s,
+	$pseudo: before,
+	$pseudo-offset: 0.15rem
+) {
+	position: relative;
+	transform: translateY(-$distance);
+
+	&::#{$pseudo} {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+
+		@if $distance < 0 {
+			top: $distance - $pseudo-offset;
+		} @else {
+			bottom: -$distance - $pseudo-offset;
+		}
+	}
+}

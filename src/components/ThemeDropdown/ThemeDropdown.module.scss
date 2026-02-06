@@ -1,0 +1,82 @@
+.dropdown {
+	height: fit-content;
+	position: relative;
+
+	.trigger,
+	.menu,
+	.option {
+		width: 100%;
+	}
+}
+
+.trigger {
+	font-weight: 500;
+
+	&[aria-expanded='true'] > svg {
+		transform: rotate(180deg);
+	}
+}
+
+.menu {
+	position: absolute;
+	top: calc(100% + 0.25rem);
+	right: 0;
+
+	box-shadow: var(--shadow-lg);
+	overflow: hidden;
+
+	animation: slide-down 0.2s ease;
+}
+
+@keyframes slide-down {
+	from {
+		opacity: 0;
+		transform: translateY(-1rem);
+	}
+}
+
+.option {
+	&:not(:last-child) {
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	&[aria-checked='true'] {
+		color: var(--primary);
+		background-color: rgb(from var(--primary) r g b / 0.1);
+		font-weight: 500;
+	}
+
+	&:focus-visible {
+		outline: none;
+		background-color: var(--bg-tertiary);
+	}
+}
+
+.trigger,
+.option {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5rem;
+
+	padding: 0.5rem 1rem;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	transition: background-color var(--transition-fast);
+
+	> svg {
+		transition: transform var(--transition-fast);
+	}
+
+	@include hover {
+		background-color: var(--bg-tertiary);
+	}
+}
+
+.trigger,
+.menu {
+	background-color: var(--bg-secondary);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-sm);
+	will-change: transform;
+}
