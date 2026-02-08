@@ -1,0 +1,20 @@
+{
+	"short_name": "Matvei Senckevich",
+	"name": "Matvei Senckevich - Developer | Portfolio",
+	"icons": [
+		{
+			"src": "/180x180.webp",
+			"sizes": "180x180",
+			"type": "image/webp"
+		},
+		{
+			"src": "/favicon-300x300.webp",
+			"sizes": "300x300",
+			"type": "image/webp"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}
