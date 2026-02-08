@@ -28,6 +28,7 @@ export const Project: FC<ProjectProps> = ({
 				<img
 					src={imageUrl}
 					alt={title}
+					loading='lazy'
 				/>
 				<span>{tags[0]}</span>
 			</div>

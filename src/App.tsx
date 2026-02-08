@@ -18,11 +18,13 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Hero />
-			<About />
-			<Skills />
-			<Links />
-			<Projects />
+			<main>
+				<Hero />
+				<About />
+				<Skills />
+				<Links />
+				<Projects />
+			</main>
 			<Footer />
 		</>
 	)

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, type FC } from 'react'
+import { Contacts } from '../Contacts/Contacts'
 import { Container } from '../Container/Container'
 import { HamburgerButton } from '../HamburgerButton/HamburgerButton'
 import { Logo } from '../Logo/Logo'
@@ -30,7 +31,10 @@ export const Header: FC = () => {
 			{isMobileMenuOpen && (
 				<Container className={s.mobileContainer}>
 					<Navbar className={s.mobileNavbar} />
-					<ThemeDropdown className={s.mobileDropdown} />
+					<div className={s.right}>
+						<ThemeDropdown className={s.mobileDropdown} />
+						<Contacts className={s.contacts} />
+					</div>
 				</Container>
 			)}
 		</header>

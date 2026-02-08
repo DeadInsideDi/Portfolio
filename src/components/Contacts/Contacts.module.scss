@@ -1,0 +1,10 @@
+.contacts {
+	display: flex;
+	gap: 1rem;
+
+	a {
+		display: flex;
+		align-items: center;
+		gap: 0.2rem;
+	}
+}

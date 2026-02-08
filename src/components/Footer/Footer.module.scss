@@ -1,7 +1,7 @@
 // Footer use dark theme only
 
 .footer {
-	margin-top: 4rem;
+	margin-top: 10rem;
 	border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 
 	background-color: var(--dark-bg-secondary);
@@ -41,8 +41,10 @@ a.logo {
 	color: var(--dark-text-primary);
 }
 
-.copyright {
-	font-size: 0.9rem;
+.contacts > li {
+	@include hover {
+		color: var(--dark-text-primary);
+	}
 }
 
 // Mobile footer
@@ -58,5 +60,11 @@ a.logo {
 	@include breakpoint-range($to: sm) {
 		flex-direction: column;
 		gap: 1rem;
+	}
+}
+
+.contacts {
+	@include breakpoint-range($to: sm) {
+		flex-direction: column;
 	}
 }

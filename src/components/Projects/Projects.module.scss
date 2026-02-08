@@ -1,19 +1,27 @@
+@property --rotation {
+	syntax: '<angle>';
+	inherits: false;
+	initial-value: 0deg;
+}
+
 .projects {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 
-	&::after {
+	&::before {
 		content: '';
 		position: absolute;
-		inset: 1rem 7.5%;
-
-		border: 1rem dashed rgb(from var(--primary) r g b / 0.5);
-		border-top: hidden;
-		border-bottom: hidden;
+		inset: 5rem;
+		border: solid 3rem transparent;
 		border-radius: 6rem;
-		z-index: -1;
+		background:
+			linear-gradient(var(--bg-primary)) padding-box,
+			linear-gradient(var(--rotation), var(--primary), var(--secondary))
+				border-box;
+
+		animation: rotate 3s linear infinite;
 	}
 
 	> * {
@@ -24,12 +32,16 @@
 		border-radius: var(--radius-md);
 
 		transition: all var(--transition-base);
-		will-change: transform, box-shadow;
+		will-change: transform, translate, box-shadow;
 
 		width: 80%;
 		&:nth-child(even) {
+			--direction: -1;
 			align-self: flex-end;
 		}
+
+		animation: translate-side ease-in 1ms forwards;
+		animation-timeline: view(y 0);
 
 		@include breakpoint-range($to: md) {
 			width: 100%;
@@ -39,11 +51,25 @@
 		@include hover {
 			box-shadow: var(--shadow-lg);
 			border-color: var(--primary);
-			img {
-				transform: scale(1.05);
-			}
 			@include bubble-up;
 		}
+	}
+}
+
+@keyframes rotate {
+	from {
+		--rotation: 0turn;
+	}
+	to {
+		--rotation: 1turn;
+	}
+}
+@keyframes translate-side {
+	50% {
+		translate: 0;
+	}
+	to {
+		translate: calc(var(--direction, 1) * 100%) 0;
 	}
 }
 
@@ -57,10 +83,6 @@
 	border-top-left-radius: inherit;
 	border-top-right-radius: inherit;
 	overflow: hidden;
-
-	img {
-		transition: transform var(--transition-slow);
-	}
 
 	> span {
 		position: absolute;

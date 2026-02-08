@@ -1,4 +1,5 @@
 import { LogoIcon } from '@/assets'
+import { CONFIG } from '@/config/main.config'
 import { cn } from '@/utils/clsx'
 import type { FC } from 'react'
 import s from './Logo.module.scss'
@@ -13,7 +14,7 @@ export const Logo: FC<LogoProps> = ({ className }) => {
 			className={cn(className, s.logo)}
 		>
 			<LogoIcon />
-			MatSen
+			{CONFIG.company}
 		</a>
 	)
 }

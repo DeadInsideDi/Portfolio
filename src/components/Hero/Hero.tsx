@@ -23,12 +23,14 @@ export const Hero: FC = () => {
 				</div>
 
 				<div className={s.presentation}>
-					<div className={s.breadcrumb}>Web is Awesome</div>
+					<div className={s.speech}>Welcome!</div>
 					<div className={s.image}>
 						<div className={s.shape}></div>
 						<img
-							src='/author-photo.png'
+							src='/author-photo.webp'
 							alt='Author Photo'
+							fetchPriority='high'
+							rel='preload'
 						/>
 					</div>
 				</div>

@@ -47,7 +47,7 @@
 .presentation {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: 5rem;
 
 	@include breakpoint-range($to: md) {
 		font-size: 0.75rem;
@@ -56,31 +56,40 @@
 		font-size: 0.6rem;
 	}
 }
-
-.breadcrumb {
-	--padding: 1rem;
+.speech {
+	padding: 0.75em;
 	color: var(--white);
-
-	line-height: 2;
 	font-size: 2em;
 	font-weight: 600;
-	padding-bottom: 0.2em;
+	background: linear-gradient(150deg, var(--primary), var(--secondary) 400%);
+	border-radius: var(--radius-full);
+	will-change: transform;
 	z-index: 1;
+	position: relative;
 
-	padding-inline: calc(var(--padding) + 1em) 1em;
-	background: linear-gradient(135deg, var(--primary), var(--secondary) 300%);
-	clip-path: polygon(
-		0 0,
-		calc(100% - var(--padding)) 0,
-		100% 50%,
-		calc(100% - var(--padding)) 100%,
-		0 100%,
-		var(--padding) 50%
-	);
+	animation: disappear ease-in 1ms;
+	animation-timeline: view(y 0 50%);
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 110%;
+		top: 30%;
+		width: 20%;
+		aspect-ratio: 1;
+		border-radius: var(--radius-full);
+		background: linear-gradient(135deg, var(--primary), var(--secondary) 300%);
+	}
 
 	@include unselectable;
 	@include breakpoint-range($to: sm) {
 		display: none;
+	}
+}
+
+@keyframes disappear {
+	to {
+		transform: scale(0.5);
 	}
 }
 
@@ -126,7 +135,7 @@
 	background: linear-gradient(135deg, var(--primary), var(--secondary));
 
 	will-change: transform;
-	animation: appear-shape 2s ease-out infinite alternate;
+	animation: appear-shape 5s cubic-bezier(0.8, 0, 0.2, 1) infinite alternate;
 }
 
 @keyframes appear-shape {

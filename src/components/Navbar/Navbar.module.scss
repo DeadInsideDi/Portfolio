@@ -1,5 +1,5 @@
 @mixin active-item {
-	color: var(--primary);
+	color: var(--primary-contrast);
 
 	&::after {
 		width: 100%;
@@ -8,7 +8,7 @@
 
 .navbar {
 	gap: 2.5rem;
-	font-weight: 500;
+	font-weight: 600;
 
 	> li {
 		color: var(--text-secondary);
@@ -26,7 +26,7 @@
 			position: absolute;
 			width: 0;
 			height: 2px;
-			background: var(--primary);
+			background-color: var(--primary);
 			left: 0;
 			bottom: 0;
 			transition: width var(--transition-base);
