@@ -90,4 +90,10 @@
 
 .contacts {
 	flex-direction: column;
+
+	a {
+		@include hover {
+			color: var(--primary);
+		}
+	}
 }

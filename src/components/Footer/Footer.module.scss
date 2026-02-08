@@ -41,7 +41,7 @@ a.logo {
 	color: var(--dark-text-primary);
 }
 
-.contacts > li {
+.contacts a {
 	@include hover {
 		color: var(--dark-text-primary);
 	}
