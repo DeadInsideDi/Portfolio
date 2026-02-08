@@ -3,7 +3,8 @@ import type { ProjectProps } from '@/components/Projects/Projects'
 export const PROJECTS: ProjectProps[] = [
 	{
 		title: 'KinGrid',
-		description: 'A simple and beautiful grid system for React.',
+		description:
+			'It is website for creating user intarective family tree with modern disign, adding relatives. Its all online and you can edit it with your family.',
 		href: 'https://kingrid.vercel.app',
 		imageUrl: '/projects/kingrid.webp',
 		tags: ['Next.js', 'React', 'GSAP', 'TS', 'SCSS'],
