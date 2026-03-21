@@ -24,7 +24,7 @@ export const SKILL_CARDS: SkillCardProps[] = [
 		icon: NextJsIcon,
 		title: 'Next.js',
 		description:
-			'Building server-rendered React applications with Next.js for optimal performance and SEO.',
+			'Создаю серверные приложения на Next.js для максимальной производительности и SEO.',
 		iconColor: 'var(--text-primary)',
 	},
 	{
@@ -52,56 +52,55 @@ export const SKILL_CARDS: SkillCardProps[] = [
 		icon: TypeScriptIcon,
 		title: 'TypeScript',
 		description:
-			'Developing type-safe applications with TypeScript to ensure code reliability and maintainability.',
+			'Разрабатываю надежные приложения на TypeScript с упором на типизированный код.',
 		iconColor: '#3178c6',
 	},
 	{
 		icon: SassIcon,
 		title: 'Sass',
 		description:
-			'Creating maintainable, modular styles with SCSS preprocessor. Fan of mixins, variables, and functions.',
+			'Создаю стили на SCSS. Эффективно использую миксины, переменные и функции.',
 		iconColor: '#cf649a',
 	},
 	{
 		icon: TailwindIcon,
 		title: 'Tailwind',
 		description:
-			'Building modern, fast in development applications with Tailwind CSS.',
+			'Работал с Tailwind CSS: быстрая и простая разработка для маленьких проектов.',
 		iconColor: '#00bcff',
 	},
 	{
 		icon: SocketIoIcon,
 		title: 'Socket.io',
 		description:
-			'Building real-time applications with Socket.io for efficient and scalable communication between clients and servers.',
+			'Разрабатываю real-time приложения на Socket.io для быстрого и масштабируемого обмена данными.',
 		iconColor: 'var(--text-primary)',
 	},
 	{
 		icon: FsdIcon,
 		title: 'FSD',
 		description:
-			'Creating Feature-Sliced Disign projects ensure a clean and organized codebase.',
+			'Разрабатываю проекты по методологии FSD для обеспечения чистоты и четкой структуры кода.',
 		iconColor: '#4294e6',
 	},
 	{
 		icon: ZustandIcon,
 		title: 'Zustand',
 		description:
-			'Managing application state with Zustand for efficient and predictable state management.',
+			'Управляю состоянием через Zustand: эффективно, предсказуемо и просто.',
 		iconColor: '#ad9686',
 	},
 	{
 		icon: TanStackIcon,
 		title: 'TanStack',
 		description:
-			'Wonderful async state manager with robust features and a simple hooks.',
+			'Отличный асинхронный стейт-менеджер с мощным функционалом и простыми хуками.',
 		iconColor: 'var(--text-primary)',
 	},
 	{
 		icon: AxiosIcon,
 		title: 'Axios',
-		description:
-			'Making HTTP requests with Axios for efficient and reliable data fetching.',
+		description: 'Использую Axios для надежных и эффективных HTTP-запросов.',
 		iconColor: '#5a29e4',
 	},
 ]
@@ -110,37 +109,35 @@ export const LINK_CARDS: LinkCardProps[] = [
 	{
 		icon: GithubIcon,
 		title: 'GitHub',
-		description: 'Check out my projects, activity, and code repositories.',
+		description: 'Посмотрите мои проекты, активность и код.',
 		href: 'https://github.com/DeadInsideDi',
 		iconColor: 'var(--text-primary)',
 	},
 	{
 		icon: LeetCodeIcon,
 		title: 'LeetCode',
-		description:
-			'View my algorithm problem-solving progress and coding challenges.',
+		description: 'Мой прогресс в алгоритмах и решении задач.',
 		href: 'https://leetcode.com/u/matvei3000',
 		iconColor: '#ffa116',
 	},
 	{
 		icon: CssBattleIcon,
 		title: 'CSS Battle',
-		description: 'View my CSS battle progress and challenges.',
+		description: 'Мой прогресс и решения в CSS Battle.',
 		href: 'https://cssbattle.dev/player/matvei',
 		iconColor: '#ffdf00',
 	},
 	{
 		icon: HabrIcon,
 		title: 'Habr',
-		description: 'View my activity on Habr.',
+		description: 'Моя активность на Habr.',
 		href: 'https://habr.com/ru/users/Matvei3000/',
 		iconColor: 'var(--text-primary)',
 	},
 	{
 		icon: HHRuIcon,
 		title: 'HH.RU',
-		description:
-			'View my activity on hh.ru where I registered as a Fullstack developer.',
+		description: 'Профиль на hh.ru: мой опыт и резюме Fullstack-разработчика.',
 		href: 'https://samara.hh.ru/resume/39bb67e7ff0f16b9180039ed1f736d676d696f',
 		iconColor: '#ff0002',
 	},

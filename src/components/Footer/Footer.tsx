@@ -18,8 +18,7 @@ export const Footer: FC = () => {
 
 			<Container className={s.content}>
 				<p>
-					&copy; {new Date().getFullYear()} {CONFIG.company}. All rights
-					reserved.
+					&copy; {new Date().getFullYear()} {CONFIG.company}.
 				</p>
 				<Contacts className={s.contacts} />
 			</Container>

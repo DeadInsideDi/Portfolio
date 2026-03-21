@@ -10,38 +10,32 @@ export const About: FC = () => {
 	return (
 		<Section id='about'>
 			<Container>
-				<h2>About Me</h2>
+				<h2>Обо Мне</h2>
 				<div className={s.content}>
 					<div className={s.box}>
 						<p>
-							I specialize in transforming complex designs into
-							high-performance, pixel-perfect web applications. My expertise
-							lies in the React ecosystem, utilizing TypeScript to build
-							scalable, type-safe architectures that bridge the gap between
-							creative vision and functional reality.
+							Создаю веб-приложения на React и TypeScript. Превращаю сложные
+							дизайны в масштабируемые проекты.
 						</p>
 						<div className={s.location}>
 							<GeoLocationIcon />
-							<span>Live and work in Russia, Volgograd</span>
+							<span>Живу и работаю в Волгограде</span>
 						</div>
 					</div>
 
 					<div className={s.description}>
 						<p>
-							With a strong focus on modern frontend technologies, I bring ideas
-							to life through clean, maintainable code and attention to detail.
-							I believe in creating web experiences that are not only visually
-							appealing but also performant and accessible.
+							Использую современный стек для создания чистого кода и продуманных
+							интерфейсов. Мой приоритет — сочетание стиля, высокой
+							производительности и доступности.
 						</p>
 						<p>
-							My development approach combines technical expertise with creative
-							problem-solving, ensuring that every project meets both business
-							objectives and user needs.
+							Решаю задачи бизнеса, создавая продукты, удобные для
+							пользователей.
 						</p>
 						<p>
-							When I'm not coding, I enjoy contributing to open-source projects,
-							solving algorithm challenges, and staying updated with the latest
-							trends in web development.
+							В свободное время решаю алгоритмические задачи и слежу за трендами
+							веб-разработки.
 						</p>
 					</div>
 				</div>

@@ -25,6 +25,7 @@
 	}
 
 	> * {
+		position: relative;
 		background-color: var(--card-bg);
 		box-shadow: var(--shadow-md);
 
@@ -32,16 +33,14 @@
 		border-radius: var(--radius-md);
 
 		transition: all var(--transition-base);
-		will-change: transform, translate, box-shadow;
+		will-change: box-shadow;
+		z-index: 1;
 
 		width: 80%;
 		&:nth-child(even) {
 			--direction: -1;
 			align-self: flex-end;
 		}
-
-		animation: translate-side ease-in 1ms forwards;
-		animation-timeline: view(y 0);
 
 		@include breakpoint-range($to: md) {
 			width: 100%;
@@ -62,14 +61,6 @@
 	}
 	to {
 		--rotation: 1turn;
-	}
-}
-@keyframes translate-side {
-	50% {
-		translate: 0;
-	}
-	to {
-		translate: calc(var(--direction, 1) * 100%) 0;
 	}
 }
 

@@ -11,19 +11,19 @@ export const NavLinks: FC<NavLinksProps> = ({ className }) => {
 	return (
 		<ul className={cn(className, s.links)}>
 			<li>
-				<a href='#home'>Home</a>
+				<a href='#home'>Главная</a>
 			</li>
 			<li>
-				<a href='#about'>About</a>
+				<a href='#about'>Обо мне</a>
 			</li>
 			<li>
-				<a href='#skills'>Skills</a>
+				<a href='#skills'>Навыки</a>
 			</li>
 			<li>
-				<a href='#links'>Links</a>
+				<a href='#links'>Ссылки</a>
 			</li>
 			<li>
-				<a href='#projects'>Projects</a>
+				<a href='#projects'>Проекты</a>
 			</li>
 		</ul>
 	)

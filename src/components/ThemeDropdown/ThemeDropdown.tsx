@@ -28,7 +28,7 @@ export const ThemeDropdown: FC<ThemeDropdownProps> = ({ className }) => {
 				className={s.trigger}
 				aria-expanded={isOpen}
 				aria-haspopup='true'
-				aria-label='Select theme'
+				aria-label='Выбор темы'
 			>
 				{THEMES_NAMES[currentTheme]}
 				<ChevronDownIcon />
@@ -38,7 +38,7 @@ export const ThemeDropdown: FC<ThemeDropdownProps> = ({ className }) => {
 				<div
 					className={s.menu}
 					role='menu'
-					aria-label='Theme selection'
+					aria-label='Выборка тем'
 				>
 					{Object.values(THEMES).map(theme => (
 						<button

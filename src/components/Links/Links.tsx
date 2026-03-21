@@ -10,7 +10,7 @@ export const Links: FC = () => {
 	return (
 		<Section id='links'>
 			<Container>
-				<h2>My Profiles</h2>
+				<h2>Мои ссылки</h2>
 				<CardsContainer>
 					{LINK_CARDS.map(card => (
 						<LinkCard

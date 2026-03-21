@@ -12,18 +12,15 @@ export const Hero: FC = () => {
 		>
 			<Container className={s.container}>
 				<div className={s.content}>
-					<h1>
-						Hi, I'm a <span>Frontend Developer</span>
-					</h1>
+					<h1>Я - Frontend Разработчик</h1>
 					<p>
-						I create modern, responsive web applications with clean code and
-						exceptional user experiences. Passionate about React ecosystem and
-						TypeScript.
+						Создаю современные проекти на React и TypeScript. Для меня важен
+						чистый код, адаптивность и отличный UX.
 					</p>
 				</div>
 
 				<div className={s.presentation}>
-					<div className={s.speech}>Welcome!</div>
+					<div className={s.speech}>Привет!</div>
 					<div className={s.image}>
 						<div className={s.shape}></div>
 						<img

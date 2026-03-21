@@ -49,7 +49,7 @@ export const Project: FC<ProjectProps> = ({
 					rel='noreferrer noopener'
 				>
 					<ExternalLinkIcon />
-					View Live
+					Посмотреть
 				</a>
 			</div>
 		</article>
@@ -60,7 +60,7 @@ export const Projects: FC = () => {
 	return (
 		<Section id='projects'>
 			<Container>
-				<h2>My Projects</h2>
+				<h2>Мои Проекты</h2>
 				<div className={s.projects}>
 					{PROJECTS.map(card => (
 						<Project

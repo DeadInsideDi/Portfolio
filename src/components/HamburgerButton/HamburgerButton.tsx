@@ -23,7 +23,6 @@ export const HamburgerButton: FC<HamburgerButtonProps> = ({
 				onClick?.(e)
 			}}
 			aria-expanded={isActive}
-			aria-label={isActive ? 'Close menu' : 'Open menu'}
 			{...props}
 		>
 			<svg

@@ -19,7 +19,7 @@ export const Contacts: FC<ContactsProps> = ({ className }) => {
 					rel='noreferrer noopener'
 				>
 					<ExternalLinkIcon />
-					Mail
+					Почта
 				</a>
 			</li>
 
@@ -30,7 +30,7 @@ export const Contacts: FC<ContactsProps> = ({ className }) => {
 					rel='noreferrer noopener'
 				>
 					<ExternalLinkIcon />
-					Telegram
+					Телеграм
 				</a>
 			</li>
 			<li>

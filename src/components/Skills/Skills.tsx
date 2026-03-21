@@ -10,7 +10,7 @@ export const Skills: FC = () => {
 	return (
 		<Section id='skills'>
 			<Container>
-				<h2>My Skills</h2>
+				<h2>Мои Навыки</h2>
 				<CardsContainer>
 					{SKILL_CARDS.map(card => (
 						<SkillCard
